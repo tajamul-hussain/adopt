@@ -12,7 +12,9 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+    "dev": "parcel public/index.html",
     "start": "react-scripts start",
+    "format": "prettier \"src/**/.{js,jsx,html}\"--write",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +36,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.1.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.2.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
