@@ -1,9 +1,9 @@
-import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 function App() {
   return (
     <div className="App">
-      <h1>Adopt me</h1>
-      <Pet name="lobo" breed="husky" />
+      <h1>Adopt Me</h1>
+      <SearchParams />
     </div>
   );
 }
