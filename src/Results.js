@@ -1,13 +1,13 @@
 import React from "react";
 import Pet from "./Pet";
 
-export default function Results({ pets }) {
+const Results = ({ pets }) => {
   return (
     <div className="search">
-      {pets.length === 0 ? (
-        <h1>No results Found</h1>
+      {!pets.length ? (
+        <h1>No Pets Found</h1>
       ) : (
-        pets.map((pet) => {
+        pets.map(pet => {
           return (
             <Pet
               animal={pet.type}
@@ -15,7 +15,9 @@ export default function Results({ pets }) {
               name={pet.name}
               breed={pet.breeds.primary}
               media={pet.photos}
-              location={`${pet.contact.address.city}, ${pet.contact.address.state}`}
+              location={`${pet.contact.address.city}, ${
+                pet.contact.address.state
+              }`}
               id={pet.id}
             />
           );
@@ -23,4 +25,6 @@ export default function Results({ pets }) {
       )}
     </div>
   );
-}
+};
+
+export default Results;
